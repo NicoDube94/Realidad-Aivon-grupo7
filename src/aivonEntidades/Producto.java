@@ -2,26 +2,26 @@ package aivonEntidades;
 
 public class Producto {
     private int idProducto,tamCm3,estrellas;
-    private double precioPublico, precioVenta;
+    private double precioPublico, precioCosto;
     private String nombre,uso;
     private boolean estado;
 
-    public Producto(int idProducto, int tamCm3, int estrellas, double precioPublico, double precioVenta, String nombre, String uso, boolean estado) {
+    public Producto(int idProducto, int tamCm3, int estrellas, double precioPublico, double precioCosto, String nombre, String uso, boolean estado) {
         this.idProducto = idProducto;
         this.tamCm3 = tamCm3;
         this.estrellas = estrellas;
         this.precioPublico = precioPublico;
-        this.precioVenta = precioVenta;
+        this.precioCosto = precioCosto;
         this.nombre = nombre;
         this.uso = uso;
         this.estado = estado;
     }
 
-    public Producto(int tamCm3, int estrellas, double precioPublico, double precioVenta, String nombre, String uso, boolean estado) {
+    public Producto(int tamCm3, int estrellas, double precioPublico, double precioCosto, String nombre, String uso, boolean estado) {
         this.tamCm3 = tamCm3;
         this.estrellas = estrellas;
         this.precioPublico = precioPublico;
-        this.precioVenta = precioVenta;
+        this.precioCosto = precioCosto;
         this.nombre = nombre;
         this.uso = uso;
         this.estado = estado;
@@ -59,12 +59,12 @@ public class Producto {
         this.precioPublico = precioPublico;
     }
 
-    public double getPrecioVenta() {
-        return precioVenta;
+    public double getPrecioCosto() {
+        return precioCosto;
     }
 
-    public void setPrecioVenta(double precioVenta) {
-        this.precioVenta = precioVenta;
+    public void setPrecioCosto(double precioCosto) {
+        this.precioCosto = precioCosto;
     }
 
     public String getNombre() {
@@ -93,7 +93,7 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto{" + "tamCm3=" + tamCm3 + ", estrellas=" + estrellas + ", precioPublico=" + precioPublico + ", precioVenta=" + precioVenta + ", nombre=" + nombre + ", uso=" + uso + ", estado=" + estado + '}';
+        return "Producto{" + "tamCm3=" + tamCm3 + ", estrellas=" + estrellas + ", precioPublico=" + precioPublico + ", precioVenta=" + precioCosto + ", nombre=" + nombre + ", uso=" + uso + ", estado=" + estado + '}';
     }
     
     
