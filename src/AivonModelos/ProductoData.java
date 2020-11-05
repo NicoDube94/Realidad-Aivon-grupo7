@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 public class ProductoData {
@@ -81,11 +83,9 @@ public class ProductoData {
                 producto.setPrecioPublico(rs.getDouble("precioVentaAlPublico"));
                 producto.setPrecioCosto(rs.getDouble("precioCosto"));
                 producto.setEstrellas(rs.getInt("estrellas"));
-            }else{
-                JOptionPane.showMessageDialog(null, "El id especificado no existe");
             }
              ps.close();
-            rs.close();
+             rs.close();
        }catch(SQLException e){
            JOptionPane.showMessageDialog(null, "no se encontro el producto que buscas");
        }
@@ -113,4 +113,30 @@ public class ProductoData {
        }
         
   }
+    public List<Producto> obtenerProductos(){
+        List<Producto> productos=new ArrayList<>();
+        Producto pro;
+        String sql="SELECT * FROM producto";
+        try{
+        PreparedStatement ps=con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+        ResultSet rs = ps.executeQuery();
+        ps.close();
+        while(rs.next()){
+            pro=new Producto();
+            pro.setIdProducto(rs.getInt("idProducto"));
+            pro.setEstado(rs.getBoolean("estado"));
+            pro.setNombre(rs.getString("nombre"));
+            pro.setUso(rs.getString("uso"));
+            pro.setTamCm3(rs.getInt("tamañoEnCm3"));
+            pro.setPrecioPublico(rs.getDouble("precioVentaAlPublico"));
+            pro.setPrecioCosto(rs.getDouble("precioCosto"));
+            pro.setEstrellas(rs.getInt("estrellas"));
+            
+            productos.add(pro);
+        }
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null, "imposible obtener Productos");
+        }
+        return productos;
+    }
 }

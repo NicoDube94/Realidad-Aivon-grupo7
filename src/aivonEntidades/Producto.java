@@ -26,6 +26,7 @@ public class Producto {
         this.uso = uso;
         this.estado = estado;
     }
+    public Producto(){};
 
     public int getIdProducto() {
         return idProducto;

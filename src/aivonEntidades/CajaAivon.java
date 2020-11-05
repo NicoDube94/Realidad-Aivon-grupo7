@@ -19,6 +19,7 @@ public class CajaAivon {
         this.pedido = pedido;
         this.producto = producto;
     }
+    public CajaAivon(){}
 
     public int getIdCaja() {
         return idCaja;
