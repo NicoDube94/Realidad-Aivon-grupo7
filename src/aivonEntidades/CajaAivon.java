@@ -5,17 +5,17 @@ public class CajaAivon {
     private Pedido pedido;
     private Producto producto;
 
-    public CajaAivon(int idCaja, int cantidadProductos, int estrellasCaja, Pedido pedido, Producto producto) {
+    public CajaAivon(int idCaja, int cantidadProductos, Pedido pedido, Producto producto) {
         this.idCaja = idCaja;
         this.cantidadProductos = cantidadProductos;
-        this.estrellasCaja = estrellasCaja;
+        this.estrellasCaja = producto.getEstrellas()*cantidadProductos;
         this.pedido = pedido;
         this.producto = producto;
     }
 
-    public CajaAivon(int cantidadProductos, int estrellasCaja, Pedido pedido, Producto producto) {
+    public CajaAivon(int cantidadProductos, Pedido pedido, Producto producto) {
         this.cantidadProductos = cantidadProductos;
-        this.estrellasCaja = estrellasCaja;
+        this.estrellasCaja = producto.getEstrellas()*cantidadProductos;
         this.pedido = pedido;
         this.producto = producto;
     }
