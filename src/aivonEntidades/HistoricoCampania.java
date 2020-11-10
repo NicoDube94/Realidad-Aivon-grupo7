@@ -4,21 +4,23 @@ public class HistoricoCampania {
     private int idHistorico, estrellasCampaniaRevendedor;
     private Campania campaniaH;
     private Revendedor revendedorH;
-    private boolean activo;
+    private boolean activo,estado;
 
-    public HistoricoCampania(int idHistorico, int estrellasCampaniaRevendedor, Campania campaniaH, Revendedor revendedorH, boolean activo) {
+    public HistoricoCampania(int idHistorico, int estrellasCampaniaRevendedor, Campania campaniaH, Revendedor revendedorH) {
         this.idHistorico = idHistorico;
         this.estrellasCampaniaRevendedor = estrellasCampaniaRevendedor;
         this.campaniaH = campaniaH;
         this.revendedorH = revendedorH;
-        this.activo = activo;
+        activo = true;
+        estado=true;
     }
 
-    public HistoricoCampania(int estrellasCampaniaRevendedor, Campania campaniaH, Revendedor revendedorH, boolean activo) {
+    public HistoricoCampania(int estrellasCampaniaRevendedor, Campania campaniaH, Revendedor revendedorH) {
         this.estrellasCampaniaRevendedor = estrellasCampaniaRevendedor;
         this.campaniaH = campaniaH;
         this.revendedorH = revendedorH;
-        this.activo = activo;
+        activo = true;
+        estado=true;
     }
 
     public int getIdHistorico() {
@@ -60,6 +62,15 @@ public class HistoricoCampania {
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+    
 
     @Override
     public String toString() {

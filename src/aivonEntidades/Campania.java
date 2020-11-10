@@ -1,28 +1,29 @@
 package aivonEntidades;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Campania {
     private int idCampania, estrellasCampania;
     private Date fechaInicio, fechaFin;
-    private double montoMinimo, montoTooe;
+    private double montoMinimo, montoTope;
 
-    public Campania(int idCampania, int estrellasCampania, Date fechaInicio, Date fechaFin, double montoMinimo, double montoTooe) {
+    public Campania(int idCampania, int estrellasCampania, Date fechaInicio, Date fechaFin, double montoMinimo, double montoTope) {
         this.idCampania = idCampania;
         this.estrellasCampania = estrellasCampania;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.montoMinimo = montoMinimo;
-        this.montoTooe = montoTooe;
+        this.montoTope = montoTope;
     }
 
-    public Campania(int estrellasCampania, Date fechaInicio, Date fechaFin, double montoMinimo, double montoTooe) {
+    public Campania(int estrellasCampania, Date fechaInicio, Date fechaFin, double montoMinimo, double montoTope) {
         this.estrellasCampania = estrellasCampania;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.montoMinimo = montoMinimo;
-        this.montoTooe = montoTooe;
+        this.montoTope = montoTope;
     }
+    public Campania(){}
 
     public int getIdCampania() {
         return idCampania;
@@ -64,17 +65,17 @@ public class Campania {
         this.montoMinimo = montoMinimo;
     }
 
-    public double getMontoTooe() {
-        return montoTooe;
+    public double getMontoTope() {
+        return montoTope;
     }
 
-    public void setMontoTooe(double montoTooe) {
-        this.montoTooe = montoTooe;
+    public void setMontoTope(double montoTope) {
+        this.montoTope = montoTope;
     }
 
     @Override
     public String toString() {
-        return "Campania{" + "estrellasCampania=" + estrellasCampania + ", fechaInicio=" + fechaInicio + ", fechaFin=" + fechaFin + ", montoMinimo=" + montoMinimo + ", montoTooe=" + montoTooe + '}';
+        return "Campania{" + "estrellasCampania=" + estrellasCampania + ", fechaInicio=" + fechaInicio + ", fechaFin=" + fechaFin + ", montoMinimo=" + montoMinimo + ", montoTooe=" + montoTope + '}';
     }
     
     

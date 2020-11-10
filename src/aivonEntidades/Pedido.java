@@ -1,6 +1,6 @@
 package aivonEntidades;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Pedido {
     private int idPedido, cantCajas, estrellasPedido;
@@ -34,6 +34,7 @@ public class Pedido {
         this.fechaDePago = fechaDePago;
         this.estado = estado;
     }
+    public Pedido(){}
 
     public int getIdPedido() {
         return idPedido;
